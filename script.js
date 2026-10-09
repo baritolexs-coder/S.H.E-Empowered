@@ -6,7 +6,7 @@
 const CONFIG = {
   // 1) Paste your Google Apps Script Web App URL here (see README, "Save responses").
   //    Leave it empty and the site runs in preview mode (nothing is saved).
-  GOOGLE_SCRIPT_URL: "",
+  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycby-Ol-oV35bCtPTCUya3xnUF7G_U_VyPyjxxQUKI7dUx0aLhagj-gTkydKsjMRxp_cj/exec",
 
   // 2) Members' WhatsApp group
   WHATSAPP_LINK: "https://chat.whatsapp.com/IMszq38FwHLIsbbCRxNOWq?mode=gi_t",

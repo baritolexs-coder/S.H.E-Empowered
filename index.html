@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>S.H.E Empowered · Member Registration</title>
+  <meta name="description" content="Register as a member of S.H.E Empowered — Support · Heal · Empower." />
+  <meta name="theme-color" content="#6B0E4B" />
+
+  <!-- Social share preview -->
+  <meta property="og:title" content="S.H.E Empowered · Member Registration" />
+  <meta property="og:description" content="Support · Heal · Empower. Register and join the members' community." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="light-streaks" aria-hidden="true"></div>
+
+  <div class="shell">
+    <!-- ───────────── Side panel (brand + step navigation) ───────────── -->
+    <aside class="side">
+      <a class="brand" href="#" data-action="home" aria-label="S.H.E Empowered — back to start">
+        <img src="assets/logo-crop.webp" alt="S.H.E — Support · Heal · Empower" width="920" height="670" />
+      </a>
+
+      <nav class="steps-nav" aria-label="Registration steps">
+        <ol>
+          <li data-nav="1"><button type="button"><span class="dot">1</span><span><strong>About you</strong><small>Name &amp; contact</small></span></button></li>
+          <li data-nav="2"><button type="button"><span class="dot">2</span><span><strong>Your studies</strong><small>Level, department, college</small></span></button></li>
+          <li data-nav="3"><button type="button"><span class="dot">3</span><span><strong>Interests</strong><small>Business, fitness, books · optional</small></span></button></li>
+          <li data-nav="4"><button type="button"><span class="dot">4</span><span><strong>Review</strong><small>Check &amp; submit</small></span></button></li>
+        </ol>
+      </nav>
+
+      <p class="side-foot">Your details are only used by the S.H.E Empowered team to connect members and plan activities.</p>
+    </aside>
+
+    <!-- ───────────── Main card ───────────── -->
+    <main class="stage">
+      <!-- Mobile header -->
+      <header class="mobile-head">
+        <img src="assets/logo-crop.webp" alt="S.H.E — Support · Heal · Empower" />
+      </header>
+
+      <div class="progress" role="progressbar" aria-label="Registration progress" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0">
+        <div class="progress-bar"></div>
+        <span class="progress-label"></span>
+      </div>
+
+      <form id="she-form" class="card" novalidate>
+        <!-- ═════════ Welcome ═════════ -->
+        <section class="panel is-active" data-step="0" aria-labelledby="welcome-title">
+          <p class="eyebrow">Member registration</p>
+          <h1 id="welcome-title">Welcome to <em>S.H.E</em> Empowered</h1>
+          <p class="lede">A sisterhood built to <em>support</em>, <em>heal</em> and <em>empower</em>. Register as a member so we can get to know you — then join the members’ WhatsApp community.</p>
+
+          <ul class="pillars" aria-label="What S.H.E stands for">
+            <li><span class="pillar-letter">S</span><span>Support</span></li>
+            <li><span class="pillar-letter">H</span><span>Heal</span></li>
+            <li><span class="pillar-letter">E</span><span>Empower</span></li>
+          </ul>
+
+          <div class="welcome-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>About 2 minutes</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>4 short steps</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Fields marked <b class="req">*</b> are required</span>
+          </div>
+
+          <div class="actions solo">
+            <button type="button" class="btn btn-primary" data-action="start">
+              Start registration
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- ═════════ Step 1 — About you ═════════ -->
+        <section class="panel" data-step="1" aria-labelledby="s1-title" hidden>
+          <p class="eyebrow">Step 1 of 4</p>
+          <h2 id="s1-title">About you</h2>
+          <p class="sub">So we know who you are and how to reach you.</p>
+
+          <div class="field">
+            <label for="fullName">Full name <b class="req">*</b></label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Adaeze Okafor" required />
+            <p class="error" data-error-for="fullName"></p>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="email">Email address <b class="req">*</b></label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required />
+              <p class="error" data-error-for="email"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number <b class="req">*</b></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="0801 234 5678" required />
+              <p class="hint">Preferably your WhatsApp number.</p>
+              <p class="error" data-error-for="phone"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═════════ Step 2 — Studies ═════════ -->
+        <section class="panel" data-step="2" aria-labelledby="s2-title" hidden>
+          <p class="eyebrow">Step 2 of 4</p>
+          <h2 id="s2-title">Your studies</h2>
+          <p class="sub">Tell us where you are in school.</p>
+
+          <fieldset class="field">
+            <legend>Level <b class="req">*</b></legend>
+            <div class="chips" id="level-chips" data-name="level" data-type="radio"></div>
+            <p class="error" data-error-for="level"></p>
+          </fieldset>
+
+          <div class="field" id="college-field">
+            <label for="college">College <b class="req">*</b></label>
+            <!-- Filled by script.js: a dropdown if COLLEGES is set, otherwise a text box -->
+            <p class="error" data-error-for="college"></p>
+          </div>
+
+          <div class="field">
+            <label for="department">Department <b class="req">*</b></label>
+            <input id="department" name="department" type="text" placeholder="e.g. Mass Communication" required />
+            <p class="error" data-error-for="department"></p>
+          </div>
+        </section>
+
+        <!-- ═════════ Step 3 — Interests (optional) ═════════ -->
+        <section class="panel" data-step="3" aria-labelledby="s3-title" hidden>
+          <p class="eyebrow">Step 3 of 4 · Optional</p>
+          <h2 id="s3-title">Professional &amp; personal interests</h2>
+          <p class="sub">This whole step is optional — it helps us connect you with members who share your interests. Skip anything you like.</p>
+
+          <!-- Business -->
+          <div class="interest" data-interest="business">
+            <div class="interest-head">
+              <span class="interest-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>
+              </span>
+              <div>
+                <h3 id="q-business">Do you own a business?</h3>
+                <p>A brand, side hustle or service — big or small.</p>
+              </div>
+              <div class="toggle" role="radiogroup" aria-labelledby="q-business">
+                <label><input type="radio" name="hasBusiness" value="Yes" /><span>Yes</span></label>
+                <label><input type="radio" name="hasBusiness" value="No" /><span>No</span></label>
+              </div>
+            </div>
+            <div class="reveal" data-reveal="hasBusiness" hidden>
+              <div class="field">
+                <label for="businessName">Business name <b class="req">*</b></label>
+                <input id="businessName" name="businessName" type="text" placeholder="e.g. Glow by Ada" />
+                <p class="error" data-error-for="businessName"></p>
+              </div>
+              <div class="field">
+                <label for="businessDescription">What does your business do? <span class="opt">optional</span></label>
+                <input id="businessDescription" name="businessDescription" type="text" placeholder="e.g. Handmade skincare, hair styling, catering…" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Fitness -->
+          <div class="interest" data-interest="fitness">
+            <div class="interest-head">
+              <span class="interest-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="14" cy="4.5" r="1.8"/><path d="M8 21l3-6 3 2v4M6 12l3-4 4 1 3 3h3M11 15l-1-4"/></svg>
+              </span>
+              <div>
+                <h3 id="q-fitness">Any fitness preferences?</h3>
+                <p>Track, basketball, the gym — whatever keeps you moving.</p>
+              </div>
+              <div class="toggle" role="radiogroup" aria-labelledby="q-fitness">
+                <label><input type="radio" name="fitness" value="Yes" /><span>Yes</span></label>
+                <label><input type="radio" name="fitness" value="No" /><span>No</span></label>
+              </div>
+            </div>
+            <div class="reveal" data-reveal="fitness" hidden>
+              <fieldset class="field">
+                <legend>Which ones? <span class="opt">pick all that apply</span></legend>
+                <div class="chips" id="fitness-chips" data-name="fitnessActivities" data-type="checkbox"></div>
+                <p class="error" data-error-for="fitnessActivities"></p>
+              </fieldset>
+              <div class="field" data-other="fitnessActivities" hidden>
+                <label for="fitnessOther">Tell us the other activity</label>
+                <input id="fitnessOther" name="fitnessOther" type="text" placeholder="e.g. Skating, kickboxing…" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Books -->
+          <div class="interest" data-interest="books">
+            <div class="interest-head">
+              <span class="interest-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg>
+              </span>
+              <div>
+                <h3 id="q-books">Do you enjoy reading?</h3>
+                <p>We’ll use this for book club picks and swaps.</p>
+              </div>
+              <div class="toggle" role="radiogroup" aria-labelledby="q-books">
+                <label><input type="radio" name="books" value="Yes" /><span>Yes</span></label>
+                <label><input type="radio" name="books" value="No" /><span>No</span></label>
+              </div>
+            </div>
+            <div class="reveal" data-reveal="books" hidden>
+              <fieldset class="field">
+                <legend>Favourite genres <span class="opt">pick all that apply</span></legend>
+                <div class="chips" id="book-chips" data-name="bookGenres" data-type="checkbox"></div>
+                <p class="error" data-error-for="bookGenres"></p>
+              </fieldset>
+              <div class="field" data-other="bookGenres" hidden>
+                <label for="bookOther">Tell us the other genre</label>
+                <input id="bookOther" name="bookOther" type="text" placeholder="e.g. Horror, graphic novels…" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═════════ Step 4 — Review ═════════ -->
+        <section class="panel" data-step="4" aria-labelledby="s4-title" hidden>
+          <p class="eyebrow">Step 4 of 4</p>
+          <h2 id="s4-title">Review your details</h2>
+          <p class="sub">Make sure everything looks right. Tap <b>Edit</b> on any section to change it.</p>
+          <div id="review" class="review"></div>
+          <p class="form-error" id="submit-error" role="alert" hidden></p>
+        </section>
+
+        <!-- ═════════ Success ═════════ -->
+        <section class="panel success" data-step="5" aria-labelledby="done-title" hidden>
+          <div class="success-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          </div>
+          <p class="eyebrow">You’re registered</p>
+          <h2 id="done-title">Welcome to the sisterhood, <em id="done-name">sis</em>!</h2>
+          <p class="sub">One last step — join the <b>S.H.E Empowered Registered Members</b> WhatsApp group to stay in the loop.</p>
+
+          <div class="join">
+            <a class="btn btn-whatsapp" id="wa-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C8.86 3 3.04 8.8 3.04 15.95c0 2.29.6 4.52 1.75 6.5L3 29l6.73-1.76a13 13 0 0 0 6.3 1.6h.01c7.17 0 13-5.8 13-12.95C29.04 8.8 23.21 3 16.04 3Zm0 23.66h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.23-4 1.04 1.07-3.89-.26-.4a10.67 10.67 0 0 1-1.65-5.73c0-5.95 4.85-10.79 10.8-10.79 5.94 0 10.78 4.84 10.78 10.8 0 5.94-4.84 10.7-10.83 10.7Zm5.92-8.08c-.32-.16-1.92-.95-2.22-1.05-.3-.11-.51-.16-.73.16-.21.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.37-.5-2.6-1.6-.96-.86-1.61-1.91-1.8-2.23-.19-.32-.02-.5.14-.66.15-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69s1.16 3.12 1.32 3.33c.16.21 2.28 3.47 5.52 4.87.77.33 1.37.53 1.84.68.77.24 1.48.21 2.03.13.62-.09 1.92-.78 2.19-1.54.27-.76.27-1.4.19-1.54-.08-.13-.29-.21-.61-.37Z"/></svg>
+              Join the WhatsApp group
+            </a>
+
+            <div class="qr-card">
+              <img src="assets/whatsapp-qr.png" alt="QR code to join the S.H.E Empowered Registered Members WhatsApp group" width="540" height="540" />
+              <p><b>On a laptop?</b> Scan this with your phone camera or WhatsApp to join.</p>
+            </div>
+          </div>
+
+          <div class="actions solo">
+            <button type="button" class="btn btn-ghost" data-action="restart">Register another member</button>
+          </div>
+        </section>
+
+        <!-- ═════════ Navigation ═════════ -->
+        <div class="actions nav" id="nav-actions" hidden>
+          <button type="button" class="btn btn-ghost" data-action="back">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            Back
+          </button>
+          <button type="button" class="btn btn-primary" data-action="next">
+            <span class="label">Continue</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </form>
+
+      <p class="foot">© <span id="year"></span> S.H.E Empowered · Support · Heal · Empower</p>
+      <p class="preview-pill" id="preview-pill" hidden>Preview mode — responses are not being saved yet. See README to connect Google Sheets.</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
